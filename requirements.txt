@@ -1,0 +1,8 @@
+numpy
+pandas
+ortools
+pytest
+black
+isort
+flake8
+mypy

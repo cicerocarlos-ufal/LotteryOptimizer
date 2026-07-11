@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lottery_optimizer"
+version = "0.1.0"
+description = "Lottery Optimizer Framework"
+authors = [
+    {name = "Cícero Carlos de Souza Almeida"}
+]
+requires-python = ">=3.12"
+
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "ortools>=9.11",
+    "pytest>=8.2",
+]
+
+[tool.setuptools.packages.find]
+include = ["lottery_optimizer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+python_files = [
+    "test_*.py"
+]
+
+addopts = "-ra"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.12"
